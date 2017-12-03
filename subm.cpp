@@ -1,13 +1,17 @@
 #include<iostream>
 #include<math.h>
 #include<vector>
+#include<fstream>
 using namespace std;
 
+ifstream fin("multimi.in");
+ofstream fout("multimi.out");
+
 int main(){
-  int n=10,m;
-  
+  int n,m;
+  fin>>n;
   double possible=log2(n);
-  cout<<n<<endl;
+  //cout<<n<<endl;
   //cout<<possible;
   if(int(possible)==possible)
     m=possible;
@@ -16,7 +20,7 @@ int main(){
   //cout<<m;
   vector<vector<int> >subm(m);
   for(int i=0;i<m;i++){
-    for(int j=1;j<n;j++){
+    for(int j=1;j<=n;j++){
       int candidate=j;
       candidate=candidate>>i;
       //cout<<candidate<<endl;
@@ -26,11 +30,12 @@ int main(){
       }
     }
   }
-  for(int i=0;i<subm.size();i++){
-    cout<<i+1<<" : ";
+  fout<<m<<endl;
+  for(int i=subm.size()-1;i>=0;i--){
+    //cout<<i+1<<" : ";
     for(int j=0;j<subm[i].size();j++){
-      cout<<subm[i][j]<<" ";
+      fout<<subm[i][j]<<" ";
     }
-    cout<<endl;
+    fout<<endl;
   }
 }
