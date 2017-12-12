@@ -1,2 +1,5 @@
 -graf oritat rep prin matricea de costuri
 -cel mai eficient drum intre 2 noduri
+
+a[i][j]={ 0,i=j ; costul , exista arc intre i si j ; infinit daca nu exista arc}
+
