@@ -1,0 +1,10 @@
+arbore - graf neorientat fara cicluri
+
+n noduri n-1 muchii
+
+vector de tati :
+
+t[i]={
+  0 daca i este radacina
+  nodul de care este atasat i
+}
