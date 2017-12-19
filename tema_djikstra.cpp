@@ -1,7 +1,8 @@
 #include<iostream>
 #include<fstream>
-#include<cmath>
 #include<deque>
+
+#define INFINITY 10000
 
 using namespace std;
 
